@@ -1,0 +1,51 @@
+<!-- In this html new listing can be made 
+
+Create Listing: Users should be able to visit a page to create a new 
+listing. They should be able to specify a title for the listing, a 
+text-based description, and what the starting bid should be. Users should 
+also optionally be able to provide a URL for an image for the listing and/or 
+a category (e.g. Fashion, Toys, Electronics, Home, etc.).-->
+
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<h2>Create a new listing</h2>
+
+<form action="{% url 'create_listing' %}" method="POST">
+    {% csrf_token %}
+    <!-- Source for forms: https://getbootstrap.com/docs/4.0/components/forms/ -->
+    <div class="form-group">
+        <label for="title">Title: </label>
+        <input type="text" name="title" class="form-control" id="title" placeholder="Enter title">
+    </div>
+
+    <div class="form-group">
+        <label for="description">Describe your product: </label>
+        <input type="text" name="description" class="form-control" id="title" placeholder="Description">
+    </div>
+
+    <div class="form-group">
+        <label for="image_url">Image link (URL): </label>
+        <input type="text" name="image_url" class="form-control" id="image_url" placeholder="URL">
+    </div>
+
+    <div class="form-group">
+        <label for="price">Price: </label>
+        <input type="number" name="price" class="form-control" id="title" placeholder="The product's price">
+    </div>
+    <div class="form-group">
+        <label for="category">Choose a category: </label>
+        <select name="category" class="form-control" id="category">
+            {% for category in categories %}
+            <option value="{{ category }}">{{ category }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="form-group">
+        <!-- Source for button: https://getbootstrap.com/docs/4.0/components/buttons/ -->
+        <button type="submit" class="btn btn-primary mt-2">Save </button>
+    </div>
+
+</form>
+
+{% endblock %}

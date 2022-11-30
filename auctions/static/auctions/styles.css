@@ -1,3 +1,13 @@
 body {
     padding: 10px;
+    /* animation: yolo 1s linear infinite; */
 }
+
+/* @keyframes yolo {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    99% {
+        transform: rotateZ(359deg);
+    }
+} */

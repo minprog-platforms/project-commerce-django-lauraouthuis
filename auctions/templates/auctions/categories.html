@@ -1,0 +1,21 @@
+<!-- In this html a list of all categories of the listings is showed. By clicking
+    a category, the user will be redirected to a page with just listing of that 
+    category.-->
+
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<h2>Listing categories</h2>
+<h3>Hi! Choose a category below to see items that apply to your category of choice.</h3>
+
+<form action="{% url show_category}" method="POST">
+    {% csrf_token %}
+    <label for="category"> Choose a category: </label>
+    <select name="category" id="category">
+        {% for category in categories %}
+        <option value="{{ category }}"> {{ category}} </option>
+        {% endfor %}
+    </select>
+</form>
+
+{% endblock %}
