@@ -8,14 +8,15 @@
 <h2>Listing categories</h2>
 <h3>Hi! Choose a category below to see items that apply to your category of choice.</h3>
 
-<form action="{% url show_category}" method="POST">
+<form action="{% url 'show_category' %}" method="POST">
     {% csrf_token %}
     <label for="category"> Choose a category: </label>
     <select name="category" id="category">
-        {% for category in categories %}
-        <option value="{{ category }}"> {{ category}} </option>
+        {% for categ in categories %}
+        <option value="{{ category }}"> {{ category }} </option>
         {% endfor %}
     </select>
+    <button type="submit" class="btn btn-primary">Search category</button>
 </form>
 
 {% endblock %}

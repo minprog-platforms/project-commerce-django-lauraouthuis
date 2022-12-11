@@ -1,25 +1,43 @@
+<!-- This page contains the active lisitings of the website. -->
+
 {% extends "auctions/layout.html" %}
 
 {% block body %}
-
-<!-- Active Listings Page: The default route of your web application 
-should let users view all of the currently active auction 
-listings. For each active listing, this page should display (at 
-minimum) the title, description, current price, and photo (if 
-one exists for the listing). -->
 <h2>Active Listings</h2>
 
-<div class="row mx-5">
+<!--<div>
+    Source to link hyperlink: https://www.w3schools.com/html/html_links.asp 
+    Click <a href="{% url 'show_category' %}">here</a> to see listings and filter them by category!
+</div>-->
+
+<div>
+    <h4>Hi! Choose a category below to see items that apply to your category of choice.</h4>
+
+    <form action="{% url 'index' %}" method="POST">
+        {% csrf_token %}
+        <label for="category"> Choose a category: </label>
+        <select name="category" id="category">
+            {% for category in categories %}
+            <option value="{{ category }}"> {{ category }} </option>
+            {% endfor %}
+        </select>
+        <button type="submit" class="btn btn-primary">Search category</button>
+    </form>
+</div>
+
+<div class="row" style="column-gap: 15px;">
     {% for listing in listings %}
     <!-- Source for card: https://getbootstrap.com/docs/4.0/components/card/  -->
-    <div class="card" style="width: 18rem;">
+    <div class="card pt-2 col-3" style="width: 18rem;">
         <img class="card-img-top" src="{{ listing.image_url }}" alt="Listing item">
-        <!-- bovenstaande regel kan ook alt als 'alt="{{ listing.title }}" -->
+
         <div class="card-body">
             <h5 class="card-title"> {{ listing.title }} </h5>
             <p class="card-text"> {{ listing.description }} </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <p class="card-text"> €{{ listing.price.bid }} </p>
+            <a href="{% url 'listing' id=listing.id %}" class="btn btn-outline-primary">See item</a>
         </div>
+
     </div>
     {% endfor %}
 </div>
