@@ -12,10 +12,10 @@
 
 <body>
     <div class="container-fluid px-4 mx-auto">
-        <h1>Auctions</h1>
+        <h1>Laura's animal and cheese market!</h1>
         <div>
             {% if user.is_authenticated %}
-            Signed in as <strong>{{ user.username }}</strong>.
+            Welcome, <strong>{{ user.username }}</strong>.
             {% else %}
             Not signed in.
             {% endif %}
@@ -24,9 +24,6 @@
             <!-- Links that are available to all website visitors -->
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'index' %}">Active Listings</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'show_category' %}">Listing categories</a>
             </li>
             <!-- Links that are available when the user is logged in -->
             {% if user.is_authenticated %}

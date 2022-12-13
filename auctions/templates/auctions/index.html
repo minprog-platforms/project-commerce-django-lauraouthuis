@@ -3,7 +3,7 @@
 {% extends "auctions/layout.html" %}
 
 {% block body %}
-<h2>Active Listings</h2>
+<h2 class="page_title">Active Listings</h2>
 
 <!--<div>
     Source to link hyperlink: https://www.w3schools.com/html/html_links.asp 
@@ -11,21 +11,23 @@
 </div>-->
 
 <div>
-    <h4>Hi! Choose a category below to see items that apply to your category of choice.</h4>
+    <h5>Hi! Choose a category below to see items that apply to your category of choice.</h5>
 
-    <form action="{% url 'index' %}" method="POST">
+    <form style="display: flex; align-items: end; gap: 10px;" action="{% url 'index' %}" method="POST">
         {% csrf_token %}
-        <label for="category"> Choose a category: </label>
-        <select name="category" id="category">
-            {% for category in categories %}
-            <option value="{{ category }}"> {{ category }} </option>
-            {% endfor %}
-        </select>
+        <div class="form-group">
+            <label style="margin-bottom: 10px;" for="category"> Choose a category: </label>
+            <select class="form-select" name="category" id="category">
+                {% for category in categories %}
+                <option value="{{ category }}"> {{ category }} </option>
+                {% endfor %}
+            </select>
+        </div>
         <button type="submit" class="btn btn-primary">Search category</button>
     </form>
 </div>
 
-<div class="row" style="column-gap: 15px;">
+<div class="row" style="gap: 15px; padding-top: 15px;">
     {% for listing in listings %}
     <!-- Source for card: https://getbootstrap.com/docs/4.0/components/card/  -->
     <div class="card pt-2 col-3" style="width: 18rem;">

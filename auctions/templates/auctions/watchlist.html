@@ -1,18 +1,19 @@
 {% extends "auctions/layout.html" %}
 
 {% block body %}
-<h2>My watchlist</h2>
+<h2 class="page_title">My watchlist</h2>
 
-<div class="row mx-5">
+<div class="row" style="gap: 15px; padding-top: 15px;">
     {% for listing in listings %}
-    <div class="card" style="width: 18rem;">
+    <div class="card pt-2 col-3" style="width: 18rem;">
 
         <img class="card-img-top" src="{{ listing.image_url }}" alt="Listing item">
 
         <div class="card-body">
             <h5 class="card-title"> {{ listing.title }} </h5>
             <p class="card-text"> {{ listing.description }} </p>
-            <a href="{% url 'listing' id=listing.id %}" class="btn btn-primary">See item</a>
+            <p class="card-text"> €{{ listing.price.bid }} </p>
+            <a href="{% url 'listing' id=listing.id %}" class="btn btn-outline-primary">See item</a>
         </div>
 
     </div>

@@ -1,0 +1,15 @@
+body {
+    margin-top: 10px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.page_title {
+    color: #4863A0;
+    margin-top: 10px;
+    font-size: 2rem;
+}
