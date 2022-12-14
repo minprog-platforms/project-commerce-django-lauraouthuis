@@ -34,9 +34,6 @@ class Bid(models.Model):
         User, on_delete=models.CASCADE, blank=True, null=True,
         related_name="user_bid")
 
-    # def __str__(self):
-    #     return self.bid
-
 
 class AuctionListings(models.Model):
     """ Pass in everything a listing item needs"""
