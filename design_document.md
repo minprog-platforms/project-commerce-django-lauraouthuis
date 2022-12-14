@@ -9,7 +9,7 @@ Het doel van deze opdracht is het maken van een veilingwebsite. Hier kunnen gebr
 Het lastigste aan deze opdracht gaat denk ik het implementeren van de database zijn, aangezien ik hier nog nauwelijk ervaring mee heb. Hiervoor heb ik als voorbereiding het SQL college gekeken en de notes doorgenomen. 
 
 ## Schetsen  
-Zie bijlage onderaan het document
+Zie afbeeldingen in de README.md
 
 ## Workflow: wat moet de gebruiker allemaal kunnen?  
 x De gebruiker moet zich kunnen registreren via een registreer knop  
@@ -21,3 +21,6 @@ x Een ingelogde gebruiker moet kunnen bieden op een listing item
 x Een ingelogde gebruiker moet zelf items op de listing kunnen zetten  
 x Een ingelogde gebruiker moet items kunnen toevoegen aan de watchlist  
 x Een ingelogde gebruiker moet zijn veilingitem kunnen sluiten  
+
+## Models Class diagram
+![Class diagrams](images/class_diagram.JPG)  

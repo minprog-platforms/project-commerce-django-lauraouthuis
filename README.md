@@ -6,8 +6,8 @@ add listings to the auction and bid on items!
 ## Getting Started
 To use this application, download the repository and run python3 manage.py runserver. 
 
-![connections](images/connections.JPG)
-![main_page](images/main_page.JPG)
-![log_in](images/log_in.JPG)
-![new_listing](images/new_listing.JPG)
-![watchlist](images/watchlist.JPG)
+![Relationship between the pages](images/connections.JPG)  
+![Main page](images/main_page.JPG)  
+![Log in page](images/log_in.JPG)  
+![New listing page](images/new_listing.JPG)  
+![Watchlist page](images/watchlist.JPG)  
