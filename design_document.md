@@ -12,12 +12,12 @@ Schetsen
 Zie bijlage onderaan het document
 
 Workflow: wat moet de gebruiker allemaal kunnen?  
-De gebruiker moet zich kunnen registreren via een registreer knop  
-De gebruiker moet kunnen inloggen via een registreer knop  
-De gebruiker moet kunnen uitloggen via een registreer knop  
-Niet-ingelogde gebruikers kunnen de items kunnen veilingitems bekijken via de active listingspagina.  
-De gebruiker moeten items kunnen filteren op basis van categorie  
-Een ingelogde gebruiker moet kunnen bieden op een listing item  
-Een ingelogde gebruiker moet zelf items op de listing kunnen zetten  
-Een ingelogde gebruiker moet items kunnen toevoegen aan de watchlist  
-Een ingelogde gebruiker moet zijn veilingitem kunnen sluiten  
+x De gebruiker moet zich kunnen registreren via een registreer knop  
+x De gebruiker moet kunnen inloggen via een registreer knop  
+x De gebruiker moet kunnen uitloggen via een registreer knop  
+x Niet-ingelogde gebruikers kunnen de items kunnen veilingitems bekijken via de active listingspagina.  
+x De gebruiker moeten items kunnen filteren op basis van categorie  
+x Een ingelogde gebruiker moet kunnen bieden op een listing item  
+x Een ingelogde gebruiker moet zelf items op de listing kunnen zetten  
+x Een ingelogde gebruiker moet items kunnen toevoegen aan de watchlist  
+x Een ingelogde gebruiker moet zijn veilingitem kunnen sluiten  
