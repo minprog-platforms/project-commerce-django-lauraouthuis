@@ -9,7 +9,17 @@ body {
 }
 
 .page_title {
-    color: #4863A0;
+    color: #216DA0;
     margin-top: 10px;
     font-size: 2rem;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+    background-color: #216DA0 !important;
+    color: white;
+    outline-color: black !important;
+    box-shadow: 0 0 0 0.2rem rgba(170, 183, 197, 0.5);
 }
