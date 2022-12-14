@@ -1,7 +1,10 @@
-Design Commerce assignment
-Laura Outhuis (s14687887)
+Design Commerce assignment  
 
-Wat ga ik maken en hoe gaat het eruit zien
+Laura Outhuis (s14687887)  
+
+
+Wat ga ik maken en hoe gaat het eruit zien  
+
 Het doel van deze opdracht is het maken van een veilingwebsite. Hier kunnen gebruikers zich registreren en inloggen om zelf veilingitems toe te voegen en op veilingitems te bieden. De gebruikers kunnen veilingitems volgen door deze toe te voegen aan hun watchlist. Wanneer een gebruiker zijn veilingitem wilt sluiten zal een bieder die op dat moment het hoogst uitgebrachte bod heeft het item winnen. 
 
 Technical challenges

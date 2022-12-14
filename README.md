@@ -1,4 +1,4 @@
-# Application Name
+# Auction website application - Laura Outhuis
 This application is an online auction website, where users can create profiles, 
 add listings to the auction and bid on items!
 
