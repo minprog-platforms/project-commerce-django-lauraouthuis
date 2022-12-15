@@ -9,9 +9,6 @@ from django.db import models
 you'll need to first run python3 manage.py makemigrations and then
 python manage.py migrate to migrate those changes to your database"""
 
-""" The application should have at least three models in addition to the User
-model: auction listings, bids and comments."""
-
 
 class User(AbstractUser):
     pass
@@ -29,6 +26,7 @@ class Category(models.Model):
 
 
 class Bid(models.Model):
+    """ Class to store the bids from users in. """
     bid = models.FloatField(default=0)
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, blank=True, null=True,
@@ -36,7 +34,8 @@ class Bid(models.Model):
 
 
 class AuctionListings(models.Model):
-    """ Pass in everything a listing item needs"""
+    """ Class to store information about listing items. """
+    # Pass in everything a listing item needs
     title = models.CharField(max_length=64)
     description = models.CharField(max_length=250)
     image_url = models.CharField(max_length=1000)
@@ -60,6 +59,7 @@ class AuctionListings(models.Model):
 
 
 class Comment(models.Model):
+    """ Class to store comments from users in. """
     writer = models.ForeignKey(
         User, on_delete=models.CASCADE,
         blank=True, null=True, related_name="comment_writer")
@@ -70,16 +70,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"{self.writer} comment on {self.listing}"
-
-
-""" Personal notes
-
-blank=True -->  One can also add more built-in field validations
-                for applying or removing certain constraints on a particular
-                field. blank=True will make the field accept blank values.
-                It simply means that field can be empty.
-
-on_delete=models.CASCADE -->    if the user gets deleted, the listing gets
-                                deleted as well
-
-  """
