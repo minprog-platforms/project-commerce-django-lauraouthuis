@@ -7,6 +7,7 @@
 <h2>Listing categories</h2>
 <h3>Hi! Choose a category below to see items that apply to your category of choice.</h3>
 
+<!-- Form to choose a category -->
 <form action="{% url 'show_category' %}" method="POST">
     {% csrf_token %}
     <label for="category"> Choose a category: </label>
