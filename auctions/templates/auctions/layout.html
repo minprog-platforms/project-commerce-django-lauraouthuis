@@ -12,7 +12,7 @@
 
 <body>
     <div class="container-fluid px-4 mx-auto">
-        <h1>Laura's animal and cheese market!</h1>
+        <h1>Laura's animal, plants and cheese market!</h1>
         <div>
             {% if user.is_authenticated %}
             Welcome, <strong>{{ user.username }}</strong>.
@@ -46,8 +46,6 @@
             {% endif %}
         </ul>
         <hr>
-
-
         {% block body %}
         {% endblock %}
     </div>

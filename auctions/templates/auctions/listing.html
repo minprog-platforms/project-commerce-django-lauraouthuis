@@ -38,7 +38,6 @@
     </p>
 </div>
 
-<!-- Button for users to add or remove an item from their watchlist -->
 <!-- Button for owners to close the auction -->
 <div class="row">
     {% if user.is_authenticated and listing.active_item == True %}
@@ -48,6 +47,7 @@
         <button type="submit" class="btn btn-primary mb-2">Close the auction</button>
     </form>
     {% endif %}
+    <!-- Button for users to add or remove an item from their watchlist -->
     {% if listing_in_watchlist %}
     <form action="{% url 'remove_from_watchlist' id=listing.id %}" method="POST">
         {% csrf_token %}
@@ -88,7 +88,6 @@
             <input type="text" name="add_comment" placeholder="Write a new comment">
             <button type="submit" class="btn btn-primary">Add comment</button>
         </div>
-        <!-- je kan ook de button in een aparte div zetten -->
     </form>
     {% endif %}
 
