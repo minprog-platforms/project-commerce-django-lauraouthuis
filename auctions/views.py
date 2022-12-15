@@ -1,7 +1,6 @@
 from django.contrib.auth import authenticate, login, logout
 from django.db import IntegrityError
 from django.http import HttpResponseRedirect
-# from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 
@@ -9,8 +8,7 @@ from .models import User, Category, AuctionListings, Comment, Bid
 
 
 def index(request):
-    # Check in models.py if an listing (in class AuctionListings is active)
-    # proberen of iets als if active_listing == True ook kan
+    # Check in models.py if an listing (in class AuctionListings) is active
     if request.method == "POST":
         categoryFromForm = request.POST['category']
         category = Category.objects.get(category_type=categoryFromForm)
@@ -86,7 +84,7 @@ def create_listing(request):
             "categories": all_categories
         })
     else:
-        # user_larry = current_user
+        # user_larry is the current user
         user_larry = request.user
 
         # Get the needed data from the form from create_listing.html
@@ -112,7 +110,7 @@ def create_listing(request):
             owner=user_larry
         )
 
-        new_listing.save()  # See source material
+        new_listing.save()
         return HttpResponseRedirect(reverse(index))
 
 
