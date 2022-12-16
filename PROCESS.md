@@ -68,7 +68,7 @@ Ik merkte tijdens dit project vooral dat ik snel het overzicht verloor, waardoor
   
 Referenties  
 1 What does on_delete do on Django models? (2016, 15 juli). Stack Overflow. https://stackoverflow.com/questions/38388423/what-does-on-delete-do-on-django-models  
-How to create a superuser in Django. (z.d.). Educative: Interactive Courses for Software Developers. https://www.educative.io/answers/how-to-create-a-superuser-in-django  
-Django. (z.d.). Django Project. https://docs.djangoproject.com/en/4.1/ref/contrib/admin/  
-How can i remove extra “s” from django admin panel? (2015c, augustus 17). Stack Overflow. https://stackoverflow.com/questions/32047686/how-can-i-remove-extra-s-from-django-admin-panel  
-Winter, R. (2022, 23 augustus). What Are Rem Units? (& How to Use Them in CSS). https://blog.hubspot.com/website/css-rem  
+2 How to create a superuser in Django. (z.d.). Educative: Interactive Courses for Software Developers. https://www.educative.io/answers/how-to-create-a-superuser-in-django  
+3 Django. (z.d.). Django Project. https://docs.djangoproject.com/en/4.1/ref/contrib/admin/  
+4 How can i remove extra “s” from django admin panel? (2015c, augustus 17). Stack Overflow. https://stackoverflow.com/questions/32047686/how-can-i-remove-extra-s-from-django-admin-panel  
+5 Winter, R. (2022, 23 augustus). What Are Rem Units? (& How to Use Them in CSS). https://blog.hubspot.com/website/css-rem  
